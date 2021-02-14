@@ -26,7 +26,9 @@ router.get('/:id?',
 
 router.post('/', 
 function(request, response) {
+    console.log(request.body)
   car.add(request.body, function(err, count) {
+      console.log(request.body)
     if (err) {
       response.json(err);
     } else {

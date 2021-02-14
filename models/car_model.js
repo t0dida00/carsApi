@@ -20,7 +20,7 @@ const car = {
   update: function(id, car, callback) {
     return db.query(
       'update car set brand=?,model=?, yearmodel=? where idcar=?',
-      [car.brand, car.model, car.yearmodel],
+      [car.brand, car.model, car.yearmodel, id],
       callback
     );
   },
